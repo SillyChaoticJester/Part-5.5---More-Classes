@@ -20,13 +20,56 @@ namespace Part_5._5___More_Classes
         public Die(int roll)
         {
             _generator = new Random();
-            _roll = roll;
+            if (roll < 1)
+                _roll = 1;
+            else if (roll > 6)
+                _roll = 6;
+            else
+                _roll = roll;
         }
 
         public int Roll
         {
             get { return _roll; }
             
+        }
+
+        public override string ToString()
+        {
+            return _roll + "";
+        }
+
+        public void RollDie()
+        {
+            _roll = _generator.Next(1, 7);
+        }
+
+        public void DrawDie()
+        {
+            if (_roll == 1)
+            {
+                Console.WriteLine("-----\r\n|   |\r\n| o |\r\n|   |\r\n-----");
+            }
+            else if (_roll == 2) 
+            {
+                Console.WriteLine("-----\r\n|o  |\r\n|   |\r\n|  o|\r\n-----");
+            }
+            else if (_roll == 3)
+            {
+                Console.WriteLine("-----\r\n|o  |\r\n| o |\r\n|  o|\r\n-----");
+            }
+            else if (_roll == 4)
+            {
+                Console.WriteLine("-----\r\n|o o|\r\n|   |\r\n|o o|\r\n-----\r\n");
+            }
+            else if (_roll == 5)
+            {
+                Console.WriteLine("-----\r\n|o o|\r\n| o |\r\n|o o|\r\n-----\r\n");
+            }
+            else if (_roll == 6)
+            {
+                Console.WriteLine("-----\r\n|o o|\r\n|o o|\r\n|o o|\r\n-----");
+            }
         }
     }
 }
