@@ -31,6 +31,7 @@ namespace Part_5._5___More_Classes
         public int Roll
         {
             get { return _roll; }
+            //set { _roll = value; }
             
         }
 
