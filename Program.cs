@@ -24,6 +24,15 @@
             {
                 Console.WriteLine("You got an Even Sum!");
             }
+
+            if (die1.Roll > die2.Roll)
+            {
+                Console.WriteLine("Dice One is Bigger!");
+            }
+            else if (die2.Roll > die1.Roll)
+            {
+                Console.WriteLine("Dice Two is Bigger!");
+            }
             // Can't figure out how to look for a sequence-
             die1.DrawDie();
             die2.DrawDie();
